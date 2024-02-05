@@ -44,6 +44,8 @@ Aplicação que recebe dois valores, exibe o resultado como área em m² e atual
 
 - `showCalculatorTitle`: (boolean) - Define se o título é exibido.
 - `calculatorTitle`: (string) - Texto do título.
+- `showCalculatorSubTitle`: (boolean) - Define se o subtítulo é exibido.
+- `calculatorSubtitle`: (string) - Texto do subtítulo.
 - `widthLabel`: (string) - Label de largura.
 - `widthPlaceholder`: (string) - Placeholder de largura.
 - `lengthLabel`: (string) - Label de comprimento.
