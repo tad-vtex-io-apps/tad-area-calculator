@@ -1,0 +1,59 @@
+{
+  "name": "tad-area-calculator",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
+    "start": "vtex setup --typings --verbose && vtex link --verbose",
+    "vlogin": "vtex login --verbose",
+    "vuse": "vtex use --verbose",
+    "lint:locales": "intl-equalizer",
+    "test": "cd ./react && yarn test",
+    "vst": "vtex setup --typings --verbose",
+    "vsl": "vtex setup --verbose && vtex link --verbose",
+    "vl": "vtex link --verbose",
+    "vu": "vtex unlink --verbose",
+    "vin": "vtex install --verbose",
+    "vun": "vtex uninstall --verbose",
+    "vwr": "vtex workspace reset --verbose",
+    "vrm": "vtex release minor stable --verbose",
+    "vrp": "vtex release patch stable --verbose",
+    "vms": "vtex release major stable --verbose",
+    "vpub": "vtex publish --verbose",
+    "vdf": "vtex deploy --force --verbose"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && intl-equalizer && intl-equalizer --fix"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@vtex/intl-equalizer": "^2.5.0",
+    "@vtex/prettier-config": "^0.3.5",
+    "eslint": "^7.14.0",
+    "eslint-config-vtex": "^12.8.11",
+    "eslint-config-vtex-react": "^6.8.3",
+    "git-commit-msg-linter": "^3.2.8",
+    "husky": "^7.0.4",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.2.0",
+    "typescript": "^3.9.6"
+  },
+  "intl-equalizer": {
+    "referenceLocale": "en",
+    "localeDirectory": "messages"
+  }
+}

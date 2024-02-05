@@ -1,0 +1,7 @@
+{
+  "types": {
+    "init": "Inicializa o projeto",
+    "temp": false,
+    "test": false
+  }
+}
