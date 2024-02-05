@@ -59,8 +59,13 @@ Aplicação que recebe dois valores, exibe o resultado como área em m² e atual
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-
-
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/felipealmeidacorrea"><img src="https://avatars.githubusercontent.com/u/80332784?v=4?s=100" width="100px;" alt="Felipe Almeida Correa"/><br /><sub><b>Felipe Almeida Correa</b></sub></a><br /><a href="https://github.com/tad-vtex-io-apps/tad-area-calculator/commits?author=felipealmeidacorrea" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
