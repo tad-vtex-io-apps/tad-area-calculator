@@ -5,6 +5,8 @@ import { useProduct, useProductDispatch } from 'vtex.product-context';
 type Props = {
   showCalculatorTitle: boolean
   calculatorTitle: string
+  showCalculatorSubTitle: boolean
+  calculatorSubtitle: string
   widthLabel: string;
   widthPlaceholder: string;
   lengthLabel: string;
@@ -19,6 +21,7 @@ type Props = {
 export const CSS_HANDLES = [
   'container',
   'title',
+  'subtitle',
   'inputsContainer',
   'wrapper',
   'inputElement',
@@ -36,6 +39,8 @@ export const CSS_HANDLES = [
 function AreaCalculator({
   showCalculatorTitle = true,
   calculatorTitle = 'Calculadora de área',
+  showCalculatorSubTitle = true,
+  calculatorSubtitle = 'Informe medidas',
   widthLabel = 'Largura (m)',
   widthPlaceholder = 'Ex: 1,50',
   lengthLabel = 'Comprimento (m)',
@@ -101,6 +106,7 @@ function AreaCalculator({
   return (
     <div className={`${handles.container}`}>
       {showCalculatorTitle && <p className={`${handles.title}`}>{calculatorTitle}</p>}
+      {showCalculatorSubTitle && <p className={`${handles.subtitle}`}>{calculatorSubtitle}</p>}
       <div className={`${handles.inputsContainer}`}>
         <div className={`${handles.wrapper}`}>
           <div className={`${handles.inputElement}`}>
@@ -155,9 +161,19 @@ AreaCalculator.schema = {
     default: true
     },
     calculatorTitle: {
-      title: 'Texto título da calculadora',
+      title: 'Texto do título da calculadora',
       type: 'string',
       default: 'Calculadora de área'
+    },
+    showCalculatorSubTitle: {
+      title: 'Exibe subtítulo da calculadora?',
+      type: 'boolean',
+      default: true
+    },
+    calculatorSubTitle: {
+      title: 'Texto do subtítulo da calculadora',
+      type: 'string',
+      default: 'Informe medidas'
     },
     widthLabel: {
       title: 'Label de largura',
