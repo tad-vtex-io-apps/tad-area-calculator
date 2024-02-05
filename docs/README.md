@@ -15,7 +15,7 @@ Aplicação que recebe dois valores, exibe o resultado como área em m² e atual
   "vendor": "{vendor}",
   "name": "tad-area-calculator",
   "version": "0.0.1",
-  "title": "Expandable Component",
+  "title": "Calculadora de área",
   "description": "Aplicação que recebe dois valores, exibe o resultado como área em m² e atualiza o seletor de quantidade da página de produto."
 }
 ```
